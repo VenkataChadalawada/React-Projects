@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+          .person{
+            display:inline-block;
+            border: 1px solid #000;
+            margin: 10px;
+            box-shadow: 0 10px 10px  #ccc;
+            width: 300px;
+            padding:20px;
+          }
+    </style>
+   </head>
+  <body>
+    <div id="per"></div>
+    <div id="pers"></div>
+    <script>
+        /* please make sure you add React & ReactDOM and your compiler is Babel as it has JSX */
+        function Person(props){
+            return(
+              <div className="person">
+                <h1>Name: {props.name}</h1>
+                <p>Age: {props.age}</p>
+              </div>
+            );
+          }
+        ReactDOM.render(<Person name="venkata" age="29"/>, document.querySelector('#per'));
+        ReactDOM.render(<Person name="Sravi" age="28"/>, document.querySelector('#pers'));
+    </script>
+  </body>
+  
+</html>
+
